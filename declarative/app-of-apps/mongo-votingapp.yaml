@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: mongo-votingapp
-  namespace: argocd
+  namespace: cloudchamp
   metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
