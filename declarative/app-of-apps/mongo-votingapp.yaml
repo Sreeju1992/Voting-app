@@ -14,7 +14,7 @@ spec:
     path: ./declarative/manifests/mongodb-votingapp
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: cloudchamp
   syncPolicy:
     automated:
        prune: true  
