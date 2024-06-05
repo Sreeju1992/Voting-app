@@ -8,10 +8,10 @@ spec:
   goTemplateOptions: ["missingkey=error"]
   generators:
   - git:
-      repoURL: https://github.com/kostis-codefresh/many-appsets-demo.git
+      repoURL: https://github.com/Sreeju1992/Voting-app.git
       revision: HEAD
       directories:
-      - path: apps/*/envs/qa
+      - path: apps/*/overlay/qa
   template:
     metadata:
       name: '{{index .path.segments 1}}-{{index .path.segments 3}}'
@@ -21,14 +21,14 @@ spec:
 
       # Source of the application manifests
       source:
-        repoURL: https://github.com/kostis-codefresh/many-appsets-demo.git
+        repoURL: https://github.com/Sreeju1992/Voting-app.git
         targetRevision: HEAD
         path: '{{.path.path}}'
 
       # Destination cluster and namespace to deploy the application
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{index .path.segments 1}}-{{index .path.segments 3}}'
+        namespace: cloudchamp
 
       # Sync policy
       syncPolicy:
