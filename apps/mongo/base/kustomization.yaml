@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - mongo-statefulset.yaml
 - mongo-service.yaml
+- mongo-secret.yaml
 labels:
 - includeSelectors: false
   pairs:

@@ -7,13 +7,3 @@ labels:
     env: dev
 resources:
 - ../../base
-
-secretGenerator:
-- literals:
-  - username=<username>
-  - password=<password>
-  name: mongodb-secret
-  type: Opaque
-  options:
-    annotations:
-      avp.kubernetes.io/path: /credentials/app
